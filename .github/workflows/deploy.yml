@@ -1,0 +1,60 @@
+name: 🚀 نشر موقع البورتفوليو
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📦 استنساخ المستودع
+      uses: actions/checkout@v4
+      
+    - name: 🔧 إعداد Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        
+    - name: 🧪 اختبار الموقع
+      run: |
+        echo "🧪 اختبار HTML..."
+        # فحص صحة HTML
+        if [ -f "index.html" ]; then
+          echo "✅ ملف index.html موجود"
+        else
+          echo "❌ ملف index.html مفقود"
+          exit 1
+        fi
+        
+        echo "🧪 اختبار CSS..."
+        if [ -f "style.css" ]; then
+          echo "✅ ملف style.css موجود"
+        else
+          echo "❌ ملف style.css مفقود"
+          exit 1
+        fi
+        
+        echo "🧪 اختبار JavaScript..."
+        if [ -f "script.js" ]; then
+          echo "✅ ملف script.js موجود"
+        else
+          echo "❌ ملف script.js مفقود"
+          exit 1
+        fi
+        
+        echo "✅ جميع الاختبارات نجحت!"
+        
+    - name: 🌐 نشر على GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
+        force_orphan: true
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        commit_message: '🚀 نشر موقع البورتفوليو'

@@ -1,0 +1,33 @@
+{
+  "name": "nodejs-portfolio",
+  "version": "1.0.0",
+  "description": "موقع بورتفوليو شخصي لمطور Node.js مع تصميم عربي متجاوب",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "dev": "python3 -m http.server 3000",
+    "build": "echo 'مشروع HTML/CSS/JS - لا يحتاج build'",
+    "deploy": "chmod +x deploy.sh && ./deploy.sh",
+    "test": "echo 'اختبار الموقع...' && exit 0"
+  },
+  "keywords": [
+    "portfolio",
+    "nodejs",
+    "arabic",
+    "rtl",
+    "responsive",
+    "developer",
+    "frontend"
+  ],
+  "author": "Hassan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hassan/nodejs-portfolio.git"
+  },
+  "homepage": "https://hassan.github.io/nodejs-portfolio",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
