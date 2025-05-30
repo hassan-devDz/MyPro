@@ -141,9 +141,9 @@ portfolio/
 
 إذا كان لديك أي أسئلة أو اقتراحات، لا تتردد في التواصل معي:
 
-- **البريد الإلكتروني**: [ahmed.mohamed@example.com](mailto:ahmed.mohamed@example.com)
-- **LinkedIn**: [linkedin.com/in/ahmed-mohamed](https://linkedin.com/in/ahmed-mohamed)
-- **GitHub**: [github.com/ahmed-mohamed](https://github.com/ahmed-mohamed)
+- **البريد الإلكتروني**: [benhanatamer@gmail.com](mailto:benhanatamer@gmail.com)
+- **تلغرام**: [t.me/Tamer_Benhana](https://t.me/Tamer_Benhana)
+- **GitHub**: [github.com/hassan-devDz](https://github.com/hassan-devDz)
 
 ---
 
